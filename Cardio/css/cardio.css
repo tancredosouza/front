@@ -1170,10 +1170,11 @@ footer .social-footer li:hover a {
 }
 
 .fields	{
-	font-size: 20px;
+	font-size: 15px;
 	font-family: 'Open Sans', sans-serif;
 }
 
 input {
 	background-color: #d1e0e0;
+
 }
