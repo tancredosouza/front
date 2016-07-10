@@ -1161,3 +1161,10 @@ footer .social-footer li:hover a {
 #custom-search-input .glyphicon-search{
     font-size: 23px;
 }
+
+.imgnav {
+	padding: 40px 0 100px;
+	background: url('../img/footer.jpg');
+	-webkit-background-size: cover;
+	background-size: cover;
+}
