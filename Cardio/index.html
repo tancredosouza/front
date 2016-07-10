@@ -27,6 +27,19 @@
 	<link rel="stylesheet" type="text/css" href="fonts/eleganticons/et-icons.css">
 	<!-- Main style -->
 	<link rel="stylesheet" type="text/css" href="css/cardio.css">
+
+	<script type="text/javascript">
+		$(document).ready(function(e){
+	    $('.search-panel .dropdown-menu').find('a').click(function(e) {
+			e.preventDefault();
+			var param = $(this).attr("href").replace("#","");
+			var concept = $(this).text();
+			$('.search-panel span#search_concept').text(concept);
+			$('.input-group #search_param').val(param);
+		});
+	});
+
+	</script>
 </head>
 
 <body>
@@ -48,7 +61,7 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right main-nav">
-					<li><a href="#tutorial">Como funciona?</a></li>
+					<li><a href="tutorial.html">Como funciona?</a></li>
 					<li><a href="#aulas">Aulas</a></li>
 					<li><a href="#sobre">Sobre</a></li>
 					<li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Inscreva-se</a></li>
@@ -67,24 +80,109 @@
                           <h1 class="typed" style= "color: #0066cc">O que você quer aprender hoje?</h1>
 						</div>
 					</div>
+					<div class="row">    
+				        <div class="col-xs-8 col-xs-offset-2">
+						    <div class="input-group" style="margin-top: 20px;">
+				                <div class="input-group-btn search-panel">
+				                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				                    	<span id="search_concept">Filter by</span> <span class="caret"></span>
+				                    </button>
+				                    <ul class="dropdown-menu" role="menu">
+				                      <li><a href="#contains">Contains</a></li>
+				                      <li><a href="#its_equal">It's equal</a></li>
+				                      <li><a href="#greather_than">Greather than ></a></li>
+				                      <li><a href="#less_than">Less than < </a></li>
+				                      <li class="divider"></li>
+				                      <li><a href="#all">Anything</a></li>
+				                    </ul>
+				                </div>
+				                <input type="hidden" name="search_param" value="all" id="search_param">         
+				                <input type="text" class="form-control" name="x" placeholder="Digite aqui uma disciplina...">
+				                <span class="input-group-btn">
+				                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+				                </span>
+				            </div>
+				        </div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</header>
 	<section id="tutorial" class="section section-padded">
+		<div class="cut cut-top"></div>
 		<div class="container">
-			<div class="row text-center title">
-				<h2>Como funciona?</h2>
-			</div>
+			<h2 style="color: #0066cc">O que é o Ensinaê</h2>
+			<p>Surgida na CodeCup, a plataforma Ensinaê busca compartilhar conhecimento de forma livre e dispersa. Basta realizar um cadastro e solicitar ou fornecer aulas particulares para alunos que têm dúvidas de certos assuntos.</p>
 		</div>
-		<div class="cut cut-bottom"></div>
 	</section>
 	<section id="aulas" class="section gray-bg">
 		<div class="container">
 			<div class="row title text-center">
-				<h2 class="margin-top">Aulas</h2>
+				<h2 class="margin-top">Novas aulas cadastradas</h2>
 			</div>
-			
+		</div>
+	</section>
+	<section id="tutorial" class="section section-padded">
+		<div class="cut cut-top"></div>
+		<div class="container">
+			<div class="row intro-tables">
+				<div class="col-md-4">
+					<div class="intro-table intro-table-first">
+						<h5 class="white heading"></h5>
+						<div class="owl-testimonials bottom">
+							<div class="item">
+								<h4 class="white heading content">Aulas particulares de herminêutica jurística</h4>
+								<h5 class="white heading light author">Matheus Mamede - UFPE</h5>
+							</div>
+							<div class="item">
+								<h4 class="white heading content">Novas aulas de histórias do Brasil</h4>
+								<h5 class="white heading light author">Ivan Lima - UFRPE</h5>
+							</div>
+							<div class="item">
+								<h4 class="white heading content">Aulas da Geografia do Oriente Médio</h4>
+								<h5 class="white heading light author">Karina Karla - UPE</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="intro-table intro-table-second">
+						<h5 class="white heading"></h5>
+						<div class="owl-testimonials bottom">
+							<div class="item">
+								<h4 class="white heading content">Novas aulas de Integrais de Superfícies</h4>
+								<h5 class="white heading light author">Diogo Oliveira - Faculdade Boa Viagem</h5>
+							</div>
+							<div class="item">
+								<h4 class="white heading content">Aulas de Física 2: Flúidos e Gravitação</h4>
+								<h5 class="white heading light author">João Paulo Marques - UFPE</h5>
+							</div>
+							<div class="item">
+								<h4 class="white heading content">Programação: entenda os ponteiros de C</h4>
+								<h5 class="white heading light author">Lucas Vinícius - Universidade Católica de Pernambuco</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="intro-table intro-table-third">
+						<div class="owl-testimonials bottom">
+							<div class="item">
+								<h4 class="white heading content">Novas aulas de introdução à citologia</h4>
+								<h5 class="white heading light author">Anninha Oliveira - Faculdade Pernambucana de Saúde</h5>
+							</div>
+							<div class="item">
+								<h4 class="white heading content">Entendendo a anatomia dos quilinos</h4>
+								<h5 class="white heading light author">Annelise Rebecca - UFPE</h5>
+							</div>
+							<div class="item">
+								<h4 class="white heading content">Aulas de Botânica</h4>
+								<h5 class="white heading light author">Júlia Samara - UPE</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 	<section id="sobre" class="section">
