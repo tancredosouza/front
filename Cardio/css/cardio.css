@@ -1163,6 +1163,11 @@ footer .social-footer li:hover a {
     font-size: 23px;
 }
 
+.desc {
+	font-size: 20px;
+	font-family: 'Open Sans', sans-serif;
+}
+
 .imgnav {
 	padding: 40px 0 90px;
 	background: url('../img/footer.jpg');
